@@ -5,7 +5,9 @@ Vagrant::Config.run do |config|
 
   config.vm.box = "precise64"
 
-  config.vm.forward_port  80, 4567  
+  config.vm.forward_port  80, 4567
+  config.vm.host_name = "wordpress.ms-local.com"
+  config.vm.customize [ "modifyvm", :id, "--memory", 256]
   
   # ensure the latest packages
   config.vm.provision :chef_solo do |chef|  
@@ -19,6 +21,7 @@ Vagrant::Config.run do |config|
     chef.add_recipe "mysql::server"
     chef.add_recipe "wordpress"
 
+
     chef.json.merge!({
       :mysql => {
         :server_debian_password => "secure_password",
@@ -26,7 +29,8 @@ Vagrant::Config.run do |config|
         :server_repl_password => "secure_password"
       },
 
-      :wordpress_hostname => "wordpress.ms.com",
+      # Virtual-Host
+      :wordpress_hostname => "wordpress.42foo.com",
       "build_essential" => {
         "compiletime" => true
       }
