@@ -1,0 +1,3 @@
+[submodule "cookbooks/git"]
+	path = cookbooks/git
+	url = git@bitbucket.org:devscale/git.git
