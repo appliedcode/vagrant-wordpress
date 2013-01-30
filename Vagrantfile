@@ -17,12 +17,11 @@ Vagrant::Config.run do |config|
     chef.cookbooks_path = "cookbooks" 
     chef.roles_path = "roles"
 
-    chef.add_recipe "proxy"
     chef.add_recipe "apt"
     chef.add_recipe "git"
-    #chef.add_role "base"
-    #chef.add_recipe "mysql::server"
-    #chef.add_recipe "wordpress"
+    chef.add_role "base"
+    chef.add_recipe "mysql::server"
+    chef.add_recipe "wordpress"
     
 
 
