@@ -4,6 +4,7 @@
 Vagrant::Config.run do |config|
 
   config.vm.box = "precise64"
+  config.vm.box_url = "https://www.dropbox.com/s/957slyhxn5f4mgi/precise64.box"
 
   config.vm.forward_port  80, 4567
   config.vm.host_name = "wordpress.ms-local.com"
@@ -14,7 +15,7 @@ Vagrant::Config.run do |config|
 
     # This path will be expanded relative to the project directory
     chef.cookbooks_path = "cookbooks" 
-    #chef.roles_path = "roles"
+    chef.roles_path = "roles"
 
     chef.add_recipe "proxy"
     chef.add_recipe "apt"
