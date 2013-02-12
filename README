@@ -1,1 +1,53 @@
+Requirement:
 Vagrant box url = https://www.dropbox.com/s/957slyhxn5f4mgi/precise64.box
+
+In Windows Platform
+*************************************************************
+Ruby: Install ruby using windows installter for ruby [http://rubyinstaller.org/]
+
+Bundler:Now install a bundle using command
+            >> gem install bundler --no-ri --no-rdoc
+        Bundle can be checked using command
+		    >> gem list bundler
+Note:-If json is not installed in bundle then  we need to install "devkit"
+
+DevKit: Follow the below links Instruction 
+		>> https://github.com/oneclick/rubyinstaller/wiki/development-kit
+        Now use >>gem install json command to install it.
+
+vagrant: 	
+    1. Vagrant can be installed using command
+        >> gem install vagrant  [-v 'version']
+    2. Now to add the base box 
+    	>> vagrant box add precise64 precise64path
+    3. Vagrant initialize using >>vagrant init     command.
+    4. You can check the box list using >>vagrant box list   command.
+    5. >>vagrant up  command to finally start the VMmachine. 
+ Note: There can be a problem of box being added as base box so download box and go to box location and then add base box.
+
+***************************************************************
+In Linux Platform,
+***************************************************************
+Ruby: Install ruby, on ubuntu,
+        apt-get install ruby
+    on Centos,
+        yum install ruby
+
+Update Gems:
+            >>gem update --system
+            >>/var/lib/gems/1.8/bin/update-rubygems
+
+Now install bundler using command,
+            >>gem install bundler --no-ri --no-rdoc
+
+            Check if 'bundle' is install using the following command,
+            >> gem list bundler
+Vagrant: 
+        To install vagrant
+        >> gem install vagrant      
+        To add base box to vagrant
+        >> gem box add precise64 <path-to-precise64>
+        >> gem box list command to list the base box.
+
+
+After vagrant is installed, use command 'vagrant up'. 
