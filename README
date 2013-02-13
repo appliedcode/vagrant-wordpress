@@ -1,5 +1,5 @@
 Requirement:
-Vagrant box url = https://www.dropbox.com/s/957slyhxn5f4mgi/precise64.box
+Vagrant box url = http://files.vagrantup.com/precise64.box  
 
 In Windows Platform
 *************************************************************

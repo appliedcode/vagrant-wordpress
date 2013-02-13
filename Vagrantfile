@@ -4,7 +4,7 @@
 Vagrant::Config.run do |config|
 
   config.vm.box = "precise64"
-  config.vm.box_url = "https://www.dropbox.com/s/957slyhxn5f4mgi/precise64.box"
+  config.vm.box_url = "http://files.vagrantup.com/precise64.box"
 
   config.vm.forward_port  80, 4567
   config.vm.host_name = "wordpress.ms-local.com"
