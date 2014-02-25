@@ -1,6 +1,6 @@
 [submodule "cookbooks/git"]
 	path = cookbooks/git
-	url = git@github.com:devscale/git
+	url = git@github.com:appliedcode/git-cookbook.git
 [submodule "cookbooks/apt"]
 	path = cookbooks/apt
-	url = git@github.com:devscale/apt.git
+	url = git@github.com:appliedcode/apt-cookbook.git
